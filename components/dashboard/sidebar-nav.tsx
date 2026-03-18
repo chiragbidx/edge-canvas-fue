@@ -9,6 +9,9 @@ import {
   Hammer,
   Settings,
   Users,
+  List,
+  BookOpenText,
+  UserCircle2,
 } from "lucide-react";
 import {
   Collapsible,
@@ -25,20 +28,17 @@ type NavItem = {
 
 const sections: { title: string; items: NavItem[] }[] = [
   {
-    title: "Platform",
+    title: "Main",
     items: [
-      { label: "Overview", href: "/dashboard", icon: Home },
-      {
-        label: "Feature",
-        href: "/dashboard/feature",
-        icon: Hammer,
-      },
+      { label: "Overview", href: "/dashboard/overview", icon: Home },
+      { label: "My Listings", href: "/dashboard/listings", icon: List },
+      { label: "Bookings", href: "/dashboard/bookings", icon: BookOpenText },
     ],
   },
   {
     title: "Account",
     items: [
-      { label: "Team", href: "/dashboard/team", icon: Users },
+      { label: "Profile", href: "/dashboard/profile", icon: UserCircle2 },
       { label: "Settings", href: "/dashboard/settings", icon: Settings },
     ],
   },
